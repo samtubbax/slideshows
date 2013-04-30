@@ -86,7 +86,7 @@ class BackendSlideshowsEdit extends BackendBaseActionEdit
      */
     public static function generatePreview($var)
     {
-        return '<img src="' . FRONTEND_FILES_URL . '/slideshows/100x100/' . $var . '" />';
+        return '<img src="' . FRONTEND_FILES_URL . '/slideshows/100x/' . $var . '" />';
     }
 
 	/**

@@ -121,7 +121,7 @@ class BackendSlideshowsModel
 
         if(empty($data)) return array();
 
-        $data['image_preview'] = FRONTEND_FILES_URL . '/slideshows/100x100/' . $data['image'];
+        $data['image_preview'] = FRONTEND_FILES_URL . '/slideshows/100x/' . $data['image'];
 
         return $data;
     }
