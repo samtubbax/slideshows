@@ -21,7 +21,11 @@ class BackendSlideshowsModel
 		// get db
 		$db = BackendModel::getContainer()->get('database');
 
+		// get item
+		$item = self::get($id);
+
 		// delete records
+		$db->delete('modules_extras', 'id = ?', array($item['extra_id']));
 		$db->delete('slideshows', 'id = ? AND language = ?', array($id, BL::getWorkingLanguage()));
 	}
 
