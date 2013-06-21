@@ -94,7 +94,7 @@ class BackendSlideshowsAdd extends BackendBaseActionAdd
 
 				$id = BackendSlideshowsModel::insert($item);
 
-                BackendModel::updateExtra($item['extra_id'], 'data', serialize(array('id' => $id, 'extra_label' => $item['title'])));
+                BackendModel::updateExtra($item['extra_id'], 'data', serialize(array('id' => $id, 'extra_label' => $item['title'], 'language' => $item['language'])));
 
 				$this->redirect(BackendModel::createURLForAction('index') . '&report=added&var=' . urlencode($item['title']) . '&id=' . $this->id . '&highlight=row-' . $id);
 			}
