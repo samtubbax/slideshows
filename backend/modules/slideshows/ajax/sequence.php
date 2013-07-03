@@ -27,7 +27,7 @@ class BackendSlideshowsAjaxSequence extends BackendBaseAJAXAction
             $item['id'] = (int) $id;
 
             // change sequence
-            $item['sequence'] = $i + 1;
+            $item['sequence'] = $i;
 
             // update sequence
             BackendSlideshowsModel::updateSlide($item);
