@@ -82,7 +82,7 @@ class BackendSlideshowsAddSlide extends BackendBaseActionAdd
 
 				$item['image'] = $filename;
                 $lastSequence = BackendModel::getContainer()->get('database')->getVar('SELECT MAX(sequence) FROM slideshows_slides WHERE slideshow_id = ?', $slideshowId);
-				$item['sequence'] = ($lastSequence == null)? 0 : ($lastSequence + 1);
+				$item['sequence'] = ($lastSequence == null)? 1 : ($lastSequence + 1);
 
 				$id = BackendSlideshowsModel::insertSlide($item);
                 // everything is saved, so redirect to the overview
